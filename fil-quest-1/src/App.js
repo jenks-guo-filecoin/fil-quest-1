@@ -14,7 +14,7 @@ function App() {
             <br />
 
             <div style={{fontSize:"200%"}}>
-              <h1>IPFS & Filecoin</h1>
+              <h1>Filecoin & IPFS</h1>
             </div>
 
             <h2>Small Quest</h2>
