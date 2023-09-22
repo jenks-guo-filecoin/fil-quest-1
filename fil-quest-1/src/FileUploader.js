@@ -1,30 +1,29 @@
 import {useState} from "react";
-import { NFTStorage } from 'nft.storage';
+import { Web3Storage } from 'web3.storage/dist/bundle.esm.min.js'
 
-const NFT_STORAGE_TOKEN = 'xxx';
-
-const FileUploader = () => {
-
+export const FileUploader = ({setCids, setIpfsError, setSendingState}) => {
     const [files, setFile] = useState(null);
-    const client = new NFTStorage({ token: NFT_STORAGE_TOKEN })
+    
+    const onSubmit = async (event) => {
+      event.preventDefault();
 
-    const onSubmit = (event) => {
-        event.preventDefault();
+      const client = new Web3Storage({ token: process.env.REACT_APP_WEB3STORAGE_API_TOKEN });
 
-        try {
-            setSendingState(true);
-            const rootCid = client.store(files);
-            console.log("Successfully sent to IPFS");
-            console.log("https://" + rootCid + ".ipfs.nftstorage.link");
-            setCids([rootCid]);
-        } catch {
-             console.log("Failed to send to IPFS");
-        }
-        
+      try {
+          setSendingState(true);
+          const rootCid = await client.put(files);
+          console.log("Successfully sent to IPFS");
+          console.log("https://" + rootCid + ".ipfs.w3s.link");
+          setCids([rootCid]);
+      } catch {
+          setIpfsError(true);
+          console.log("Failed to send to IPFS");
+          setSendingState(false);
+      }
     };
 
-    const onInputChange = (event) => {
-        setFile= useState([]);
+    const onInputChange = (event)  => {
+      setFile(event.target.files);
     };
     
     return (
@@ -35,7 +34,7 @@ const FileUploader = () => {
                   className="form-control"
                   multiple/>
 
-          <button class="rpgui-button" type="submit">
+          <button className="rpgui-button" type="submit">
               <p>Upload Files 🗂️ </p>
           </button>
         </form>
