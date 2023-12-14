@@ -1,5 +1,6 @@
 import logo from './img/filecoin-logo.png';
-import nftstoragelogo from './img/nftstorage-logo.png';
+import web3storagelogo from './img/web3storage-logo.png';
+import web3storagegif from './img/web3storage.gif';
 import 'rpgui/rpgui.css';
 import 'rpgui/rpgui.js';
 import CustomWebcam from "./CustomWebcam";
@@ -20,7 +21,7 @@ function App() {
     <div className="App">
       <div className="rpgui-content rpg-cursor-default" style={{overflowY: 'scroll'}}>
         <div id="main" className="rpgui-center">
-          <div className='inner rpgui-container framed' style={{ width:'600', position: 'relative' }}>
+          <div className='inner rpgui-container framed' style={{ width:'50vh', position: 'absolute',left: "30%", right:"10%"}}>
             <br />
 
             <div style={{fontSize:"200%"}}>
@@ -35,18 +36,16 @@ function App() {
             <br />
 
             <p>
-              This quest is about uploading a photo or picture to IPFS/Filecoin via NFT.Storage service. 
+              <img src={web3storagelogo} alt="Web3.Storage Logo" style={{display: "inline-block",  width:"70%", height: "70%"}}/>
               <br/>
               <br/>
-              <img src={nftstoragelogo} alt="NFT.Storage Logo" style={{display: "inline-block"}}/>
+              Web3.Storage is a IPFS pinning services and backs up the data on Filecoin. It best of web2 and web3 to provide infra you can rely on to scale with your application. More than 200k users have already stored 200m+ object on Web3.storage. 
               <br/>
               <br/>
-              NFT.Storage is a IPFS pinning services and backs up the data on Filecoin. It is trusted by OpenSea, Zora, Magic Eden & Rarible. There is a total of more than 100 Million NFT stored on the service. 
+              <img src={web3storagegif} alt="W3s Animation" style={{display: "inline-block", float: 'inherit', width:"70%", height: "70%"}}/>
             </p>
 
             <hr className="clear:both"/>
-
-            <h1> The Quest </h1>
 
             <div className="rpgui-icon sword"></div>
             <br />
@@ -54,91 +53,19 @@ function App() {
 
             <div>
               <div className="rpgui-container framed" style={{position: 'relative', width: '90%', display: 'inline-block'}}>
-                <h1>Step 1</h1>
+                <h1>The Quest</h1>
                 <p>
-                  Click "camera" to take a selfie with Filecoin booth, or
+                  Take a photo, select a photo or upload any file form your device.
                 <br />
                 <br />
-                  Click "upload" to upload a photo
+                  Click "upload" to uploadit to IPFS.
                 <br />
                 <br />
-                  (This will upload a file to NFT.Storage)
+                  You will get an Content ID (CID) link which is a content addressed link (hash digest of the file). Show us your CID. 
                 </p>
               </div>
             </div>
 
-            <br />
-            <br />
-            <hr className="clear:both"/>
-            <br />
-
-            <div className="rpgui-icon shield"></div>
-            <br />
-            <br />
-            
-            <div>
-              <div className="rpgui-container framed" style={{position: 'relative', width: '90%', display: 'inline-block'}}>
-                <h1>Step 2</h1>
-                <p>
-                  Learn about the QR code and Content ID (CID) it generated. <br />
-                <br />
-                  (This link will be unique to this photo you uploaded, it will never change no matter where it is stored on IPFS.)
-                </p>
-              </div>
-            </div>
-
-            <br />
-            <br />
-            <hr className="clear:both"/>
-            <br />
-            
-            <div className="rpgui-icon potion-blue"></div>
-            <br />
-            <br />
-            
-            <div>
-              <div className="rpgui-container framed" style={{position: 'relative', width: '90%', display: 'inline-block'}}>
-                <h1>Step 3</h1>
-                <p>
-                  Show this QR code & CID to get a small swag. ❤️
-                  <br />
-                  <br />
-                </p>
-              </div>
-            </div>
-
-            {/* <br />
-            <br />
-            <hr className="clear:both"/>
-            <br />
-
-            <h1> Start Here </h1>
-            <button type="type" className="rpgui-button">
-              <p><a href="#camera">Take Photo</a></p>
-            </button>
-            
-            <br />
-            <p> or </p>
-            <br />
-            
-            <button type="type" className="rpgui-button">
-              <p><a href="#camera">Upload Photo</a></p>
-            </button>
-
-            <br />
-            <br />
-            <hr className="clear:both"/>
-            <br /> */}
-
-            {/* <div id="camera">
-              <div className="rpgui-container framed-golden-2" style={{position: 'relative', width: '90%', display: 'inline-block'}}>
-                <h1>Camera App</h1>
-                <div>
-                  <CustomWebcam />
-                </div>
-                <br />
-              </div>
-            </div> */}
 
             <br />
             <br />
