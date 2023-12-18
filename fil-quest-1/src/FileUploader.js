@@ -29,8 +29,9 @@ export const FileUploader = ({setCids, setIpfsError, setSendingState}) => {
     return (
       <div>
         <form method="post" action="#" id="#"  onSubmit={onSubmit}>
+          <p>First, take photo or select photo</p>
           <label for="file-upload" class="rpgui-button golden">
-            <p>Take/Select 📸</p>
+            <p> Let's Go 📸 </p>
             <input id="file-upload" type="file"
                   onChange={onInputChange}
                   className="form-control"
@@ -40,9 +41,9 @@ export const FileUploader = ({setCids, setIpfsError, setSendingState}) => {
                   }}/>
           </label>
           <br></br>
-
+          <p>Then send to IPFS</p>
           <button className="rpgui-button" type="submit">
-              <p>Upload ➡️ IPFS 🗂️ </p>
+              <p>Upload 🗂️ </p>
           </button>
         </form>
       </div>
