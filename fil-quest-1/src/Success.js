@@ -14,8 +14,7 @@ export const Success = ({cids, setCids, setSendingState}) => {
                 >Photo have been sent to Web3.Storage & IPFS successfully.</h1>
 
                 {cids.map(function(path, index) {
-                        return <div><p style={{ wordBreak:'break-all' }}><a href={"https://" + path + ".ipfs.w3s.link" } >https://{path}.ipfs.w3s.link</a></p>                            
-                        <QRCode size={256} style={{ height: "auto", maxWidth: "180", width: "100%" }} value={"https://CID.ipfs.w3s.link".replace("CID",path)} viewBox={`0 0 256 256`} bgColor='#C6813E' fgColor='#4A4D4E'/></div>
+                        return <div class="rpgui-container framed-golden" style={{position:'relative', width:'400', height:'auto', display:'inline-block'}}><p style={{ wordBreak:'break-all' }}><a href={"https://" + path + ".ipfs.w3s.link" } >https://{path}.ipfs.w3s.link</a></p><QRCode size={256} style={{ height: "auto", maxWidth: "180", width: "100%" }} value={"https://CID.ipfs.w3s.link".replace("CID",path)} viewBox={`0 0 256 256`} bgColor='#7d4f35' fgColor='white'/></div>
                     })}
                     <br/>
                     <h1 

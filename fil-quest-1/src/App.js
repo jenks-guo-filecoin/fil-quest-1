@@ -131,6 +131,11 @@ function App() {
                   width: '90%', 
                   display: 'inline-block'
                 }}>
+
+                <div className="rpgui-icon sword"></div>
+                <br />
+                <br />
+                
                 {/* <h1>File Uploader</h1> */}
                 { (cids.length === 0) && (sending === false) ? <FileUploader setCids={setCids} setIpfsError={setIpfsError} setSendingState={setSendingState} /> :null }
                 { cids.length !== 0 ? <Success cids={cids} setCids={setCids} setSendingState={setSendingState} /> : null }
