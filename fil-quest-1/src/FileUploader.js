@@ -29,13 +29,20 @@ export const FileUploader = ({setCids, setIpfsError, setSendingState}) => {
     return (
       <div>
         <form method="post" action="#" id="#"  onSubmit={onSubmit}>
-          <input type="file"
+          <label for="file-upload" class="rpgui-button golden">
+            <p>Take/Select 📸</p>
+            <input id="file-upload" type="file"
                   onChange={onInputChange}
                   className="form-control"
-                  multiple/>
+                  multiple
+                  style={{
+                    display:'none'
+                  }}/>
+          </label>
+          <br></br>
 
           <button className="rpgui-button" type="submit">
-              <p>Upload Files 🗂️ </p>
+              <p>Upload ➡️ IPFS 🗂️ </p>
           </button>
         </form>
       </div>

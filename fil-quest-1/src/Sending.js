@@ -9,7 +9,7 @@ export const Sending  = ({setCids}) => {
     return (
         <div>
             <h1>Uploading to IPFS via Web3.Storage...</h1>
-            <img src={loadingGif} alt="loading logo" style={{display: "inline-block", height: 60, width: '80%', float: 'inherit'}}/>
+            <img src={loadingGif} alt="loading logo" style={{display: "inline-block", height: '10', width: 'auto', float: 'inherit'}}/>
         </div>
 )
 }
