@@ -39,7 +39,7 @@ export const FileUploader = ({setCids, setIpfsError, setSendingState}) => {
                 }}/>
           
           <label htmlFor="file" className="rpgui-button golden">
-            <p>📸 Take/select 📸</p>
+           {(files === null) ? <p>📸 Take/select 📸</p> : <p>📸 Redo 📸</p> }
           </label>
           
           <br />
@@ -50,13 +50,9 @@ export const FileUploader = ({setCids, setIpfsError, setSendingState}) => {
             display: 'flex', 
             justifyContent: 'center', 
           }}>
-            {(files === null) ? "" : <ul className="rpgui-dropdown-imp" style={{maxWidth: "300px"}}>📁 {files[0].name} 📁</ul>}
+            {(files === null) ? "" : <div><ul className="rpgui-dropdown-imp" style={{maxWidth: "300px"}}>📁 {files[0].name} 📁</ul><p>Then, send to IPFS...</p><button className="rpgui-button" type="submit"><p>🗂️ Upload 🗂️</p></button></div>}
           </div>
-
-          <p>Then, send to IPFS...</p>
-          <button className="rpgui-button" type="submit">
-              <p>🗂️ Upload 🗂️</p>
-          </button>
+          
         </form>
       </div>
     );
