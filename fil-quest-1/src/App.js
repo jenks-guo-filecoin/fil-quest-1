@@ -77,7 +77,7 @@ function App() {
                 }}/>
               <br/>
               <br/>
-              Web3.Storage is a IPFS pinning services and backs up the data on Filecoin. It best of web2 and web3 to provide infra you can rely on to scale with your application. More than 200k users have already stored 200m+ object on Web3.storage. 
+              Web3.Storage offers IPFS pinning service and data backup on Filecoin. It combines best of web2 and web3 to provide infra you can rely on to scale with your application. More than 200k users have already stored 200m+ objects on Web3.storage. 
               <br/>
               <br/>
               <img src={web3storagegif}
@@ -106,13 +106,13 @@ function App() {
                 }}>
                 <h1>The Quest</h1>
                 <p>
-                  Take a photo or select a photo form your device.
+                  Take a photo or select a photo from your device.
                 <br />
                 <br />
-                  Click "upload" to upload it to Web3.Storage's IPFS cluster and Filecoin backup service.
+                  Click "upload" to upload it to Web3.Storage's IPFS cluster and Filecon's backup service.
                 <br />
                 <br />
-                  You will get an Content ID (CID) link which is a content addressed link (hash digest of the file). 
+                  You will get a Content ID (CID) link which is a content addressed link (hash digest of the file). 
                 </p>
               </div>
             </div>
@@ -158,7 +158,7 @@ function App() {
 
               <p> Check out the 
                 <a href="https://linktr.ee/filecoinquest"> Filecoin Quests </a>
-                for more information about IPFS & Filecoin Dev Quests.
+                for more information about other IPFS & Filecoin Dev Quests.
               </p>
 
               <a href="#main">- Back to Top -</a>

@@ -19,7 +19,7 @@ export const Success = ({cids, setCids, setSendingState}) => {
                     <br/>
                     <h1 
                 >Click the link above to retrieve the photo via IPFS W3S gateway.</h1>
-                <button className="rpgui-button golden" type="submit">
+                <button className="rpgui-button golden" type="submit" onClick={onGoBack}>
                     <p>Go Back ⏎</p>
                 </button>
             </div>

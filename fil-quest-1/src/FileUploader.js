@@ -29,21 +29,33 @@ export const FileUploader = ({setCids, setIpfsError, setSendingState}) => {
     return (
       <div>
         <form method="post" action="#" id="#"  onSubmit={onSubmit}>
-          <p>First, take photo or select photo</p>
-          <label for="file-upload" class="rpgui-button golden">
-            <p> Let's Go 📸 </p>
-            <input id="file-upload" type="file"
-                  onChange={onInputChange}
-                  className="form-control"
-                  multiple
-                  style={{
-                    display:'none'
-                  }}/>
+          <p>First, take photo or select photo; </p>
+          <input id="file" type="file"
+                onChange={onInputChange}
+                className="form-control"
+                multiple
+                style={{
+                  display:'none'
+                }}/>
+          
+          <label htmlFor="file" className="rpgui-button golden">
+            <p>📸 Take/select 📸</p>
           </label>
-          <br></br>
-          <p>Then send to IPFS</p>
+          
+          <br />
+          <br />
+
+          <div style={{
+            position:'relative',
+            display: 'flex', 
+            justifyContent: 'center', 
+          }}>
+            {(files === null) ? "" : <ul className="rpgui-dropdown-imp" style={{maxWidth: "300px"}}>📁 {files[0].name} 📁</ul>}
+          </div>
+
+          <p>Then, send to IPFS...</p>
           <button className="rpgui-button" type="submit">
-              <p>Upload 🗂️ </p>
+              <p>🗂️ Upload 🗂️</p>
           </button>
         </form>
       </div>
