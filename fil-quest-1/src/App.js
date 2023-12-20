@@ -132,7 +132,7 @@ function App() {
                   display: 'inline-block'
                 }}>
 
-                <div className="rpgui-icon sword"></div>
+                <div className="rpgui-icon potion-blue"></div>
                 <br />
                 <br />
                 
