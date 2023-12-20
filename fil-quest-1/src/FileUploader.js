@@ -11,6 +11,7 @@ export const FileUploader = ({setCids, setIpfsError, setSendingState}) => {
 
       try {
           setSendingState(true);
+          let progress = 0;
           const rootCid = await client.put(files);
           console.log("Successfully sent to IPFS");
           console.log("https://" + rootCid + ".ipfs.w3s.link");
