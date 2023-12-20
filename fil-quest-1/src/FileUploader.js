@@ -51,7 +51,7 @@ export const FileUploader = ({setCids, setIpfsError, setSendingState}) => {
             display: 'flex', 
             justifyContent: 'center', 
           }}>
-            {(files === null) ? "" : <div><ul className="rpgui-dropdown-imp" style={{maxWidth: "300px"}}>📁 {files[0].name} 📁</ul><p>Then, send to IPFS...</p><button className="rpgui-button" type="submit"><p>🗂️ Upload 🗂️</p></button></div>}
+            {(files === null) ? "" : <div><ul className="rpgui-dropdown-imp" style={{maxWidth: "300px"}}>📁 <p>{files[0].name}</p></ul><p>Then, send to IPFS...</p><button className="rpgui-button" type="submit"><p>🗂️ Upload 🗂️</p></button></div>}
           </div>
           
         </form>
