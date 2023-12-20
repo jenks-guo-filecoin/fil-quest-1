@@ -43,14 +43,6 @@ function App() {
               height:'auto', 
               position: 'absolute'
             }}>
-            <br />
-
-            <div
-              style={{
-                fontSize:"200%"
-              }}>
-              <h1>Filecoin & IPFS</h1>
-            </div>
             
             <img 
               src={logo} 
@@ -61,7 +53,17 @@ function App() {
                 float: 'inherit'
               }}/>
 
-            <h2>Small Quest</h2>
+            <div
+              style={{
+                fontSize:"200%",
+                lineHeight: "1.6"
+              }}>
+              <h1>Filecoin & IPFS</h1>
+            </div>
+            
+
+
+            <h2>Developer Quest</h2>
 
             <hr className="golden"/>
             <br />
