@@ -63,7 +63,7 @@ function App() {
             
 
 
-            <h2>Developer Quest</h2>
+            <h2>Photo Quest</h2>
 
             <hr className="golden"/>
             <br />
